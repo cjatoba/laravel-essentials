@@ -1,4 +1,4 @@
-#Tutorial para configuração do bootstrap 5 em um projeto Laravel 8
+# Tutorial para configuração do bootstrap 5 em um projeto Laravel 8
 
 You can install bootstrap manually and compile sass.
 
@@ -26,6 +26,6 @@ Now you can use it in templates with asset:
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 ```
 
-##Fonte
+## Fonte
 
 https://stackoverflow.com/questions/68393652/how-to-install-bootstrap-in-laravel-8
