@@ -22,17 +22,22 @@
 }
 ```
 - Create file `90-php-xdebug.ini` with below content:
-```
+```ini
 xdebug.mode=develop,coverage,debug,gcstats,profile,trace
 xdebug.discover_client_host=0
 xdebug.client_host='host.docker.internal'
 ```
 - Add below commands in Dockerfile (Example use image php:7.3-apache):
 
-```
+```dockerfile
 COPY ./90-php-xdebug.ini "${PHP_INI_DIR}/conf.d"
 pecl install xdebug
 docker-php-ext-enable xdebug
+```
+- Add below instruction in docker-compose.yml file:
+```yml
+extra_hosts:
+      - "host.docker.internal:host-gateway"
 ```
 
 - In Vscode install `PHP Debug` extension or similar;
