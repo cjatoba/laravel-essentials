@@ -1,4 +1,4 @@
-# How do configura xdebug in VsCode
+# How do configure xdebug in VsCode with Docker and WSL 2
 
 - Create file `.vscode/launch.json` in root directory project with below content (Replace '/var/www/project_folder' with path of your project in Docker container):
 ```json
@@ -36,4 +36,3 @@ docker-php-ext-enable xdebug
 ```
 
 - In Vscode install `PHP Debug` extension or similar;
-- In Chrome browser install `Xdebug helper` extension;
